@@ -11,8 +11,8 @@ public class Game {
         for (int i = 0; i < 10; i++) {
             list.add(randomNumber.nextInt(10));
         }
-        System.out.println("Данна последовадельность: " + list);
-        System.out.println("Колличество очков: " + resultGame(list));
+        System.out.println("Дана последовательность: " + list);
+        System.out.println("Количество очков: " + resultGame(list));
         System.out.println("Оставшиеся последовательность: " + list);
     }
 
