@@ -2,27 +2,20 @@ package gameNumber;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Game {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
-        list.add(9);
-        list.add(0);
-        list.add(4);
-        list.add(5);
-        list.add(6);
-        list.add(3);
-        list.add(8);
-        list.add(1);
-        list.add(7);
-        list.add(7);
-        list.add(8);
-        list.add(4);
-        list.add(2);
-        System.out.println("Данна последовадельность: "+list);
-        System.out.println("Колличество очков: "+resultGame(list));
-        System.out.println("Оставшиеся последовательность: "+list);
+        Random randomNumber = new Random();
+        for (int i = 0; i < 10; i++) {
+            list.add(randomNumber.nextInt(10));
+        }
+        System.out.println("Данна последовадельность: " + list);
+        System.out.println("Колличество очков: " + resultGame(list));
+        System.out.println("Оставшиеся последовательность: " + list);
     }
+
     public static int resultGame(List<Integer> list) {
         int point = 0;
         for (int i = 0; i < list.size(); ) {
